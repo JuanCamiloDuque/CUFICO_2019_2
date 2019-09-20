@@ -1,0 +1,178 @@
+//////////////////////////////////////////////////////////
+/*
+JCD
+EDO en C++
+RK6 METHOD
+
+/////////////////////////////////////////////////////////
+
+Formula de iteraccion para el RK (general)
+
+
+k_{s}  =  f(   x_{n}+h c_{s}  ,   y_{n} + h (a_ {s1} k_{1}+a_{s2}k_{2}+...+a_{s,s-1}k_{s-1}    )
+
+
+ y_{n+1}  =  y_{n} + h \sum_{i=1}^{s}   b_{i}* k_{i}
+
+  
+/////////////////////////////////////////////////////////
+
+Tabla de coeficientes para RK6
+*/
+
+//aij
+
+float a21=1/3,
+float a31=123/256, a32=315/256,
+float a41=193/750, a42=189/1250,a43= 176/1875;
+float a51=26/81,   a52= 7/15,    a53= 930/4455, a54=175/297;
+float a61= 151/150, a62= 351/250, a63= 304/4125, a64= 5/77 ,  a65= 243/175;
+
+//ci
+
+flaot c1=0, c2=1/3,c3=3/4,c41/5,c4=2/3,c6=1;
+
+//bi
+
+float b1=1/24,b2=0,b3=0,b4=125/336,b5=27/56,b6=5/48;
+
+
+/////////////////////////////////////////////////
+
+*/
+
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+	       
+int MyFirstODE(float y,float x)
+{
+  x=x-y;
+      }
+
+int ExactSolution(x)
+{
+  y= x-1+2*np.exp(-x):
+}
+
+float RK6(float xn,float yn,float hf)
+  
+{
+  float xn1=xn+h;
+  float k1=h*f(xn,yn);
+  float k2=h*f(xn+h*c2,yn+h(a21*k1));
+  float k3=h*f(xn+h*c3,yn+h*(a31*k1+a32*k2));
+  float k4=h*f(xn+h*c4,yn+h*(a41*k1+a42*k2+a43*k3));
+  float k5=h*f(xn+h*c5,yn+h*(a51*k1+a52*k2+a53*k3+a54*k4));
+  float k6=h*f(xn+h*c6,yn+h*(a61*k1+a62*k2+a63*k3+a64*k4+a65*k5));
+  float yn1=yn+h*(b1*k1+b2*k2+b3*k3+b4*k4+b5*k5+b6*k6;
+
+  }
+    				
+ ////////////////////////////////////////////////////////
+				
+				
+float x0 = 0.;
+float xf = 5.;
+float y0 = 1.0;
+float h = (xf-x0)/NumPuntos; //Divide entre array y da array
+
+
+
+/////////////////////////////////////////////////////////
+
+ 
+TotalDiffYS = []
+
+
+
+/* 
+codigo en python
+
+def Euler_mod(xn, yn, h, MyF):
+    yn2 = yn + 0.5*h*MyF(yn,xn)#y sub (n+0.5)
+    xn2= xn + 0.5*h
+    return yn + h*MyF(yn2,xn2)
+
+  
+TotalEuler = []
+
+TotalEuler_mod = []
+TotaldiffEuler_mod = []
+
+TotalDiffEuler = []
+TotalDiffYS = []
+
+
+
+
+for j in NumPuntos:
+    EulerSolutions = []
+    EulerSolutions = []
+    Euler_modSolutions = []
+
+    xs = np.linspace(x0,xf,j)
+
+    EulerSolutions.append(y0)
+    Euler_modSolutions.append(y0)
+
+    for i in xs[1:]:
+        CurrentSolution = Euler(i,EulerSolutions[-1], ((xf-x0)/j), MyFirstODE)
+        EulerSolutions.append(CurrentSolution)
+
+        CurrentSolution_mod = Euler_mod(i,Euler_modSolutions[-1], ((xf-x0)/j), MyFirstODE)
+        Euler_modSolutions.append(CurrentSolution_mod)
+
+
+        
+    ys = odeint(MyFirstODE, y0, xs)
+    ys = np.array(ys).flatten() #Consultar que es "Flatten"
+
+    y_exact = ExactSolution(xs)
+
+    TotalDiffEuler.append(np.abs(EulerSolutions-y_exact))
+    TotalDiffYS.append(np.abs(ys-y_exact))
+    TotaldiffEuler_mod.append(np.abs(Euler_modSolutions-y_exact))
+
+    y1_difference.append(np.mean(np.abs(ys-y_exact)))
+    yE_difference.append(np.mean(np.abs(EulerSolutions-y_exact)))
+    yEM_difference.append(np.mean(np.abs(Euler_modSolutions-y_exact)))
+    
+    TotalEuler.append(EulerSolutions)
+    TotalEuler_mod.append(Euler_modSolutions)
+    TotalExact.append(y_exact)
+    TotalYS.append(ys)
+    TotalXS.append(xs)
+
+asdsad
+  
+}
+
+asd*/
+
+
+
+  
+  vector<float> XValues;
+ xValues.push_back(x0);
+
+
+
+ FORMA DE CICLOS 
+
+ for(int i=0;i<NumPuntos; i++)
+   {
+   }
+
+int main(void) //salida 
+{
+  
+  
+  cout<< t << endl;
+  
+  sumaalprimero (t,k);
+  cout << t << endl;
+  return 0;
+}
